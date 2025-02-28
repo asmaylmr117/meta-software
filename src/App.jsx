@@ -191,7 +191,20 @@ function App() {
               <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
             </div>
           </div>
-          
+                    <div class="box">
+            <i class="fas fa-photo-video fa-4x"></i>
+            <h3>Graphics</h3>
+            <div class="info">
+              <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+            </div>
+          </div>
+                    <div class="box">
+            <i class="fas fa-photo-video fa-4x"></i>
+            <h3>Graphics</h3>
+            <div class="info">
+              <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+            </div>
+          </div>
         </div>
       </div>
       </motion.div>
