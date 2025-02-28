@@ -10,5 +10,30 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.getElementById("whatsappForm").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+       
+        let name = document.querySelector("[name='name']").value;
+        let email = document.querySelector("[name='email']").value;
+        let mobile = document.querySelector("[name='mobile']").value;
+        let message = document.querySelector("[name='message']").value;
+        
+        let phoneNumber = "201234567890"; 
+        
+        let whatsappMessage = `Hello, I would like to request a discount. 
+        *Name:* ${name}
+        *Email:* ${email}
+        *Phone:* ${mobile}
+        *Message:* ${message}`;
+    
+       
+        let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+       
+        window.open(whatsappURL, "_blank");
+      });
+    </script>
+    
   </body>
 </html>
