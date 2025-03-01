@@ -7,7 +7,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    
+
     if (!document.querySelector('script[src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"]')) {
       const script = document.createElement('script');
       script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
@@ -55,11 +55,11 @@ function App() {
     window.addEventListener("scroll", animateProgressBars);
     function startCounting(element, maxValue, duration) {
       let start = 0;
-      let increment = Math.ceil(maxValue / (duration / 20)); 
+      let increment = Math.ceil(maxValue / (duration / 20));
       let interval = setInterval(() => {
         start += increment;
         if (start >= maxValue) {
-          element.innerText = maxValue.toLocaleString(); 
+          element.innerText = maxValue.toLocaleString();
           clearInterval(interval);
         } else {
           element.innerText = start.toLocaleString();
@@ -72,13 +72,13 @@ function App() {
           let numbers = document.querySelectorAll(".number");
           numbers.forEach(num => {
             let maxValue = parseInt(num.getAttribute("data-value"));
-            startCounting(num, maxValue, 2000); 
+            startCounting(num, maxValue, 2000);
           });
-          observer.disconnect(); 
+          observer.disconnect();
         }
       });
     }, { threshold: 0.5 });
-  
+
     observer.observe(document.getElementById("stats"));
     return () => {
       window.removeEventListener("scroll", animateProgressBars);
@@ -235,35 +235,79 @@ function App() {
                 <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
               </div>
             </div>
-            
-            <div className="more-services-section" onClick={() => setIsModalOpen(true)}>
-              <button className="more-services-btn">
+
+            <div
+              className="more-services-section w-80 h-60 flex items-center justify-center bg-gray-200 hover:bg-blue-300 "
+              onClick={() => setIsModalOpen(true)}
+            >
+              <button className="more-services-btn w-80 h-60 flex items-center justify-center text-3xl bg-gray-200 rounded-md hover:bg-blue-300 transition">
                 <i className="fas fa-arrow-up"></i>
               </button>
             </div>
           </div>
         </div>
 
-       
+
         {isModalOpen && (
           <div className="modal-overlay">
             <div className="modal-content">
               <h2>More Services</h2>
               <div className="modal-services">
                 <div className="box">
-                  <i className="fas fa-cloud fa-4x"></i>
-                  <h3>Cloud Services</h3>
-                  <a href="#">Learn More</a>
+                  <i className="fas fa-user-shield fa-4x"></i>
+                  <h3>Security</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.eg/Security_Meta_Software/index.html">Let's get to work</a>
+                  </div>
                 </div>
                 <div className="box">
-                  <i className="fas fa-mobile-alt fa-4x"></i>
-                  <h3>Mobile Apps</h3>
-                  <a href="#">Learn More</a>
+                  <i className="fas fa-tools fa-4x"></i>
+                  <h3>Fixing Issues</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.eg/Fixing_Issues_Services_Agreement/index.html">Let's get to work</a>
+                  </div>
                 </div>
                 <div className="box">
-                  <i className="fas fa-database fa-4x"></i>
-                  <h3>Database Management</h3>
-                  <a href="#">Learn More</a>
+                  <i className="fas fa-globe fa-4x"></i>
+                  <h3>Domains</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register">Let's get to work</a>
+                  </div>
+                </div>
+                <div className="box">
+                  <i className="fas fa-laptop-code fa-4x"></i>
+                  <h3>Codes</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.eg/Programming_Services_Agreement/index.html">Let's get to work</a>
+                  </div>
+                </div>
+                <div className="box">
+                  <i className="fas fa-server fa-4x"></i>
+                  <h3>Hosting</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.eg/pages/Hosting_Meta_Software/index.html">Let's get to work</a>
+                  </div>
+                </div>
+                <div className="box">
+                  <i className="fas fa-photo-video fa-4x"></i>
+                  <h3>Graphics</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+                  </div>
+                </div>
+                <div className="box">
+                  <i className="fas fa-photo-video fa-4x"></i>
+                  <h3>Graphics</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+                  </div>
+                </div>
+                <div className="box">
+                  <i className="fas fa-photo-video fa-4x"></i>
+                  <h3>Graphics</h3>
+                  <div className="info">
+                    <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+                  </div>
                 </div>
               </div>
               <button className="close-modal-btn" onClick={() => setIsModalOpen(false)}>
@@ -364,6 +408,7 @@ function App() {
           <br />
           <br />
           <div class="container">
+            <a href="https://metasoftware.eg/pages/CONSULTATION_AND_OUTSOURCING.html">
             <div class="box">
               <img src="./images/ALTSHWER.png" alt="Consultation and Outsourcing" />
               <div class="text">
@@ -371,55 +416,64 @@ function App() {
                 <p>Meta Software drives organizational and business transformation to improve performance and effectiveness, delivering customized solutions that drive innovation and growth in markets.</p>
               </div>
             </div>
-            <div class="box">
+            </a>
+            <a href="https://metasoftware.eg/pages/PROJECT_MANAGEMENT.html">
+              <div class="box">
               <img src="./images/PROJECT.png" alt="Project Management" />
               <div class="text">
                 <h3>PROJECT MANAGEMENT</h3>
                 <p>Meta Software provides project management services to achieve smooth corporate transition and enhance satisfaction and profitability, from requirements analysis to planning and managing major projects, and providing specialized consulting.</p>
               </div>
             </div>
+            </a>
+            <a href="https://metasoftware.eg/pages/BUSINESS_PROCESS_AUTOMATION_&_INTEGRATION_SERVICES.html">
             <div class="box">
               <img src="./images/IT.png" alt="IT Outsourcing Services" />
               <div class="text">
                 <h3>IT OUTSOURCING SERVICES</h3>
                 <p>Meta Software provides IT outsourcing services, helping business managers maintain strategic control while reducing costs and risks.</p>
               </div>
-            </div>
+            </div></a>
+            <a href="https://metasoftware.eg/pages/TECHNOLOGY_SOLUTION_PROVIDER.html">
             <div class="box">
               <img src="./images/BUSINESS.png" alt="Business Process Automation" />
               <div class="text">
                 <h3>BUSINESS PROCESS AUTOMATION & INTEGRATION SERVICES</h3>
                 <p>Meta Software applies business automation standards to support all business aspects, transforming organizations into a powerful digital presence while enabling effective sales and affiliate channel management.</p>
               </div>
-            </div>
+            </div></a>
+            <a href="https://metasoftware.eg/pages/ENTERPRISE_INFORMATION_STRATEGY_PLANNING.html">
             <div class="box">
               <img src="./images/TECHNOLOGY.png" alt="Technology Solution Provider" />
               <div class="text">
                 <h3>TECHNOLOGY SOLUTION PROVIDER</h3>
                 <p>Meta Software creates high-performance IT solutions that enhance efficiency, increase productivity, and boost profits.</p>
               </div>
-            </div>
+            </div></a>
+            <a href="https://metasoftware.eg/pages/ENTERPRISE_APPLICATIONS_DEVELOPMENT.html">
             <div class="box">
               <img src="./images/PLANNING.png" alt="Enterprise Information Strategy" />
               <div class="text">
                 <h3>ENTERPRISE INFORMATION STRATEGY PLANNING</h3>
                 <p>Meta Software believes that smart decisions are the foundation for outstanding performance, and its strategy begins with identifying customer needs and developing sustainable solutions.</p>
               </div>
-            </div>
+            </div></a>
+            <a href="https://metasoftware.eg/pages/ENTERPRISE_APPLICATIONS_DEVELOPMENT.html">
             <div class="box">
               <img src="./images/ENTERPRISE.png" alt="Enterprise Applications Development" />
               <div class="text">
                 <h3>ENTERPRISE APPLICATIONS DEVELOPMENT</h3>
                 <p>Meta Software helps companies improve application performance and achieve better business outcomes by providing flexible, integrated solutions that meet business needs.</p>
               </div>
-            </div>
+            </div></a>
+            <a href="https://metasoftware.eg/pages/ENTERPRISE_APPLICATIONS_DEVELOPMENT.html">
             <div class="box">
               <img src="./images/OPERATION.png" alt="Operation & Implementation Services" />
               <div class="text">
                 <h3>OPERATION & IMPLEMENTATION SERVICES</h3>
                 <p>Meta Software offers comprehensive services covering the entire product lifecycle, ensuring solutions are planned, implemented and operated efficiently and effectively.</p>
               </div>
-            </div>
+            </div></a>
           </div>
         </div>
       </motion.div>
@@ -804,31 +858,31 @@ function App() {
         viewport={{ once: false }}
         variants={sectionVariants}
       >
-      <div class="stats" id="stats">
-  <h2>Our Awesome Status</h2>
-  <div class="container">
-    <div class="box">
-      <i class="far fa-user fa-2x fa-fw"></i>
-      <span class="number" data-value="300">0</span>
-      <span class="text">Clients</span>
-    </div>
-    <div class="box">
-      <i class="fas fa-code fa-2x fa-fw"></i>
-      <span class="number" data-value="400">0</span>
-      <span class="text">Projects</span>
-    </div>
-    <div class="box">
-      <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-      <span class="number" data-value="12">0</span>
-      <span class="text">Countries</span>
-    </div>
-    <div class="box">
-      <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-      <span class="number" data-value="500000">0</span>
-      <span class="text">Money</span>
-    </div>
-  </div>
-</div>
+        <div class="stats" id="stats">
+          <h2>Our Awesome Status</h2>
+          <div class="container">
+            <div class="box">
+              <i class="far fa-user fa-2x fa-fw"></i>
+              <span class="number" data-value="300">0</span>
+              <span class="text">Clients</span>
+            </div>
+            <div class="box">
+              <i class="fas fa-code fa-2x fa-fw"></i>
+              <span class="number" data-value="400">0</span>
+              <span class="text">Projects</span>
+            </div>
+            <div class="box">
+              <i class="fas fa-globe-asia fa-2x fa-fw"></i>
+              <span class="number" data-value="12">0</span>
+              <span class="text">Countries</span>
+            </div>
+            <div class="box">
+              <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
+              <span class="number" data-value="500000">0</span>
+              <span class="text">Money</span>
+            </div>
+          </div>
+        </div>
       </motion.div>
       <motion.div
         className="welcome-section"
@@ -851,23 +905,23 @@ function App() {
             </div>
           </div>
           <div class="form">
-  <div class="content">
-    <h2>Request A Discount</h2>
-    <form id="whatsappForm">
-      <input class="input" type="text" placeholder="Your Name" name="name" required />
-      <input class="input" type="email" placeholder="Your Email" name="email" required />
-      <input class="input" type="text" placeholder="Your Phone" name="mobile" required />
-      <textarea class="input" placeholder="Tell Us About Your Needs" name="message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</div>
+            <div class="content">
+              <h2>Request A Discount</h2>
+              <form id="whatsappForm">
+                <input class="input" type="text" placeholder="Your Name" name="name" required />
+                <input class="input" type="email" placeholder="Your Email" name="email" required />
+                <input class="input" type="text" placeholder="Your Phone" name="mobile" required />
+                <textarea class="input" placeholder="Tell Us About Your Needs" name="message" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
         </div>
       </motion.div>
       <footer className="bg-gray-900 text-white pt-12 pb-6">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-           
+
             <div className="mb-6 text-center sm:text-left">
               <h3 className="text-xl font-bold mb-4 text-primary">Meta Software</h3>
               <div className="flex justify-center sm:justify-start space-x-4 mb-4">
