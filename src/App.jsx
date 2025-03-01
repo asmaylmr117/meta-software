@@ -248,73 +248,75 @@ function App() {
         </div>
 
 
-        {isModalOpen && (
-          <div className="modal-overlay">
-            <div className="modal-content">
-              <h2>More Services</h2>
-              <div className="modal-services">
-                <div className="box">
-                  <i className="fas fa-user-shield fa-4x"></i>
-                  <h3>Security</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.eg/Security_Meta_Software/index.html">Let's get to work</a>
+       
+          {isModalOpen && (
+            <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <h2>More Services</h2>
+                <div className="modal-services">
+                  <div className="box">
+                    <i className="fas fa-user-shield fa-4x"></i>
+                    <h3>Security</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.eg/Security_Meta_Software/index.html">Let's get to work</a>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <i className="fas fa-tools fa-4x"></i>
+                    <h3>Fixing Issues</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.eg/Fixing_Issues_Services_Agreement/index.html">Let's get to work</a>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <i className="fas fa-globe fa-4x"></i>
+                    <h3>Domains</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register">Let's get to work</a>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <i className="fas fa-laptop-code fa-4x"></i>
+                    <h3>Codes</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.eg/Programming_Services_Agreement/index.html">Let's get to work</a>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <i className="fas fa-server fa-4x"></i>
+                    <h3>Hosting</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.eg/pages/Hosting_Meta_Software/index.html">Let's get to work</a>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <i className="fas fa-photo-video fa-4x"></i>
+                    <h3>Graphics</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <i className="fas fa-photo-video fa-4x"></i>
+                    <h3>Graphics</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+                    </div>
+                  </div>
+                  <div className="box">
+                    <i className="fas fa-photo-video fa-4x"></i>
+                    <h3>Graphics</h3>
+                    <div className="info">
+                      <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
+                    </div>
                   </div>
                 </div>
-                <div className="box">
-                  <i className="fas fa-tools fa-4x"></i>
-                  <h3>Fixing Issues</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.eg/Fixing_Issues_Services_Agreement/index.html">Let's get to work</a>
-                  </div>
-                </div>
-                <div className="box">
-                  <i className="fas fa-globe fa-4x"></i>
-                  <h3>Domains</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.com.eg/cart.php?a=add&domain=register">Let's get to work</a>
-                  </div>
-                </div>
-                <div className="box">
-                  <i className="fas fa-laptop-code fa-4x"></i>
-                  <h3>Codes</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.eg/Programming_Services_Agreement/index.html">Let's get to work</a>
-                  </div>
-                </div>
-                <div className="box">
-                  <i className="fas fa-server fa-4x"></i>
-                  <h3>Hosting</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.eg/pages/Hosting_Meta_Software/index.html">Let's get to work</a>
-                  </div>
-                </div>
-                <div className="box">
-                  <i className="fas fa-photo-video fa-4x"></i>
-                  <h3>Graphics</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
-                  </div>
-                </div>
-                <div className="box">
-                  <i className="fas fa-photo-video fa-4x"></i>
-                  <h3>Graphics</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
-                  </div>
-                </div>
-                <div className="box">
-                  <i className="fas fa-photo-video fa-4x"></i>
-                  <h3>Graphics</h3>
-                  <div className="info">
-                    <a href="https://metasoftware.eg/Graphics_Services_Agreement/index.html">Let's get to work</a>
-                  </div>
-                </div>
+                <button className="close-modal-btn" onClick={() => setIsModalOpen(false)}>
+                  Close
+                </button>
               </div>
-              <button className="close-modal-btn" onClick={() => setIsModalOpen(false)}>
-                Close
-              </button>
             </div>
-          </div>
+          
         )}
       </motion.div>
       <motion.div
